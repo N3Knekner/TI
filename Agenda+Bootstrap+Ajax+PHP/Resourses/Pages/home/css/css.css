@@ -1,0 +1,70 @@
+body{
+	background:lightgray;
+}
+
+#delete{
+	height: 2vh;
+	width: 2vw;
+
+}
+#delete:before{
+  content:"•••";
+  background-color: white;
+  color: green;
+  font-size: 1.9vw;
+  line-height: 20px;
+}
+
+#delete:hover{
+	cursor: pointer;
+}
+#Options{
+	position: fixed;
+}
+
+#Tag_Menu{
+	position: fixed;
+	margin-top: 10vh;
+}
+#Data_Form{
+	position: fixed;
+	margin-left: 30vw;
+}
+
+#Tag_Report_BD{
+	position: fixed;
+	margin-top: 30vh;
+}
+
+#filter{
+	position: fixed;
+	width: 10vh;
+	margin-left: 30vw;
+}
+
+#Search_Bar{
+	width: 25vw;
+	height: 4.5vh;
+	border-radius: 0.2vw;
+	padding-left: 0.1vw;
+	font-family: "Segoe UI";
+	font-weight:500;
+	font-size:2.1vh;
+	color: rgb(15,15,15);
+	background:rgb(250,250,250);
+	border: 0.15vw solid rgb(240,240,240);
+}
+
+input[type="button"],input[type="submit"]{
+	background:rgb(240,240,240);
+	height: 5.3vh;
+	font-family: "Segoe UI";
+	font-weight:500;
+	font-size:2.1vh;
+	color: rgb(15,15,15);
+	border: 1vh solid rgb(240,240,240);
+}
+#Filter_Hover_Css{
+	color: black;
+	border: 1vh solid rgb(240,240,240);
+}

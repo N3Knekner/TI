@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Listagem de Veterinários</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap_flex.css">
+    <style type="text/css">
+      img{
+        max-width:100px !important;
+      }
+    </style>
+  </head>
+  <body class="p-5" style="background-image: url('./img/Background_site_bluerred.png');">
+    <h1 class="m-2">Listagem de Veterinários</h1>
+    <div class="row justify-content-end p-2">
+      <button class="btn btn-outline-primary btn-light btn-lg m-2" onclick="window.location.href = window.location.href.replace('listaVeterinario.php', 'veterinario.php')">Cadastrar novo veterinário</button>
+    </div>
+    <table class="table table-borderless table-hover bg-light">
+      <tr>
+        <thead class="thead-dark">
+          <th>Foto de Perfil</th>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>CRMV</th>
+          <th>Telefone</th>
+          <th></th>
+        </thead>
+        </tr>
+      <tbody>
+        {itens}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Página Inicial</title>
+	
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css?v=1">
+	<style type="text/css">
+		#schedule input{
+			background-color: transparent;
+			border:0px;
+			border-bottom: 1px solid lightgray;
+			font-family: 'Raleway', sans-serif;
+			margin: 2px;
+		}
+	</style>
+</head> 
+<body onload="" style="margin: 0px; background-color: #000;">
+
+<div class="" style="width: 100%;">
+	<div id="header" class="row py-0 light">
+		<div class="col-sm-2 bnt-advanced" id="home"><img src="img/home_white.png" class="img_header"><text class="text">Início</text></div>
+		<div class="col-1 offset-6 align-self-center px-0" id="userText"><small style="float: right;">usuário</small></div>
+		<div class="col-3 bnt-simple btn-group-vertical px-0 py-0" id="profile">
+			<div class="btn dropdown-toogle px-0 py-0" id="bnt_profile">
+				<text class="text" id="UserName">Carragando...</text>
+			</div>
+			<div class="dropdown-menu" id="profile_menu">
+					<text class="dropdown-item" id="bnt_favorites">Favoritos (WIP)</text>
+					<text class="dropdown-item" id="bnt_themes">Temas (WIP)</text>
+					<div class="dropdown-divider"></div>
+					<text class="dropdown-item-text cfg" id="bnt_resetSearchBar">Manter a posição da <br> barra de pesquisa <input type="range" name="u" class="false" id="bnt_resetSearchBarAndroid" min="0" max="10" value="0"></text>
+					<text class="dropdown-item-text cfg" id="bnt_toogleQuestion">Perguntar ao excluir <input type="range" name="u" class="false" id="bnt_toogleQuestionAndroid" min="0" max="10" value="0"></text>
+					<text class="dropdown-item" id="cfg_"></text>
+					<div class="dropdown-divider"></div>
+					<text class="dropdown-item" id="menu_logoffAndOn">Entar com outra conta</text>
+					<text class="dropdown-item" id="menu_logoff">Sair</text>
+			</div>
+		</div>
+	</div>
+
+	<div id="img_Account" class="bg-info border-light rounded-circle"><text id="letter_name" class="text-light">?</text></div>
+
+	<div id="tools" class="row px-0 mx-0 light">
+		<div class="col-1_5 offset-4 bnt-advanced tool" id="tool_write">
+			<img src="img/pen_white.png" class="img_header">
+			<text class="text">Escrever</text>
+		</div>
+		<div class="col-1_5 bnt-advanced tool" id="tool_erase">
+			<img src="img/eraser_white.png" class="img_header">
+			<text class="text">Apagar</text>
+		</div>
+		<div class="col-1_5 no-gutters bnt-advanced tool" id="tool_searchBar">
+			<div class="col no-gutters"id="tool_search" >
+				<img src="img/search_white.png" class="img_header">
+				<text class="text">Pesquisar</text>
+			</div>
+			<div class="row filter tool justify-content-center" id="tool_filter" hidden>	
+				<div class="btn-group col">
+					<div class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<text class="text">Aniversário</text>
+					</div>
+	  				<div class="dropdown-menu" type="1">
+						<text class="dropdown-item" id="filter_mounth">Mês</text>
+						<div class="dropdown-divider"></div>
+						<text class="dropdown-item-text">Selecione o filtro desejado</text>
+					</div>
+				</div>
+				<div class="btn-group col">
+					<div class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<text class="text">Nomes</text>
+					</div>
+	  				<div class="dropdown-menu" type="2">
+	  					<text class="dropdown-item" id="filter_name">Nome Completo</text>
+						<text class="dropdown-item" id="filter_firstName">Primeiro Nome</text>
+						<text class="dropdown-item" id="filter_lastName">Sobrenome</text>
+						<div class="dropdown-divider"></div>
+						<text class="dropdown-item-text">Selecione o filtro desejado</text>
+					</div>
+				</div>
+				<div class="btn-group col">
+					<div class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<text class="text">E-mail</text>
+					</div>
+	  				<div class="dropdown-menu" type="3">
+						<text class="dropdown-item" id="filter_emailComplete">Completo</text>
+						<text class="dropdown-item" id="filter_emailName">Nome</text>
+						<text class="dropdown-item" id="filter_emailDomain">Domínio</text>
+						<div class="dropdown-divider"></div>
+						<text class="dropdown-item-text">Selecione o filtro desejado</text>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="schedule" class="row px-0 mx-0 light true ">
+		<canvas id="c_ArrowBack" width="250" height="1000" style="height: 100%; width: auto; position: absolute;" class="Arrow"></canvas>
+		<div id="book" class="row light true">
+				<div class="page" id="page_Verse"></div>
+				<div class="page" id="page_Front"></div>
+		</div>
+		<canvas id="c_ArrowForward" width="250" height="1000" style="height: 100%; width: auto; position: absolute; right: 0px;" class="Arrow"></canvas>
+	</div>
+
+	<div id="footer" class="row px-0 mx-0 light">
+		<text id="informationPages" class="text col-2">Página 1 de 8</text>
+		<div class="col-2 offset-8"><img src="../ImgShared/logo.png" class="logo"></div>
+	</div>
+</div>
+
+<div id="search_bar" draggable="true" hidden>
+	<div class="input-group mb-3" id="get_height_search_bar">
+		<div class="input-group-prepend">
+			<button class="btn btn-dark" type="button" id="tool_closeBar">X</button>
+			<span class="input-group-text" id="search_filterText">Filtro</span>
+		</div>
+		<input type="text" name="search" id="search_text" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="basic-addon1">
+		<div class="input-group-append">
+			<button class="btn btn-primary" type="button" id="tool_searchManualBnt">Pesquisar</button>
+		</div>
+	</div>
+	<div class="col mx-0 bg-light border border-info rounded p-4" id="results" style="overflow-y: auto; max-height: 200px; max-width: 600px;">
+			<text>Resultados Para Sua Pesquisa:</text>
+	</div>
+	
+</div>
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons" id="vision_buttons">
+		<label class="btn btn-primary btn-sm active">
+			<input type="radio" name="vision" id="bnt-5" autocomplete="off" checked> Visão 1
+		</label>
+		<label class="btn btn-primary btn-sm">
+			<input type="radio" name="vision" id="bnt-6" autocomplete="off"> Visão 2
+		</label>
+	</div>
+
+
+<div id="JS">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/page_beholder.js?v=2"></script>
+	<script src="../../Bootbox/bootbox.min.js"></script>
+</div>
+</body>
+</html>

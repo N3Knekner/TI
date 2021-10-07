@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro Veterinário</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap_flex.css">
+  </head>
+  <body style=" background-image: url('./img/Background_site_bluerred.png');">
+    <div class='container mt-5 border border-primary rounded bg-light shadow'>
+      <div class="row my-3">
+        <div class="col">
+          <h1>Cadastro Veterinário</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+
+          <form action="veterinario.php" method="POST" class="form-group" enctype="multipart/form-data">
+            <fieldset>
+              <div class="row">
+                <div class="col">
+                  <label for="nome">Nome:</label>
+                  <input type="text" class="form-control" name="nome" value="{nome}">
+                </div>
+                <div class="col">
+                  <label for="crmv">CRMV:</label>
+                  <input type="text" class="form-control" name="crmv" value="{crmv}">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="telefone">Telefone:</label>
+                  <input type="text" class="form-control" name="telefone" value="{telefone}">
+                </div>
+                <div class="col">
+                  <label for="descricao">Descricao:</label>
+                  <input type="text" class="form-control" name="descricao" value="{Descricao}">
+                </div>
+                <div class="col">
+                  <label for="ibagem">Imagem:</label>
+                  <input type="file" class="form-control-file" name="ibagem" value="Foto de Perfil">
+                </div>
+              </div>
+              <input type="hidden" name="id" value="{id}">
+              <div class="row justify-content-md-center">
+                <input class="btn btn-primary m-5 btn-lg" type="submit" name="salvar" value="Salvar">
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
